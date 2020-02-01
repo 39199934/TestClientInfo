@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BagProtocol">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACgCAAQAAgBgAAAAAIAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>BagProtocol.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInfoProtocol">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAEAABAAAAAAAgIAAAAAARAUAAAAAAAAQAAAACA=</HashCode>
+      <FileName>UserInfoProtocol.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServerInfo">
+    <Position X="6.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACEAAAAIAAAAAAAAAAAAAAAAAAAAIAAAQAAAAAA=</HashCode>
+      <FileName>ServerInfo.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientInfo">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEABAAAAAQAAAAAAAAAAAAAAAAAAAAAQgAAAAA=</HashCode>
+      <FileName>ClientInfo.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
