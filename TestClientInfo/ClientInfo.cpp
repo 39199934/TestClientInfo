@@ -12,9 +12,10 @@ ClientInfo::ClientInfo(QString name, QString nick_name, QString pass_word):
 	UserInfoProtocol(name,nick_name),
 	password(pass_word)
 {
-	createUuid();
+	
 	//setUserInfoProtocol(name, nick_name, pass_word);
 	this->setDocument();
+	createUuid();
 }
 
 QJsonObject ClientInfo::appendToSonsJson(QJsonObject* obj)

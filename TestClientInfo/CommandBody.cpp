@@ -1,10 +1,12 @@
 #include "CommandBody.h"
+#include <QDebug>
 
 QJsonObject CommandBody::appendToSonsJson(QJsonObject* obj)
 {
 	obj->insert("commandName", commandName);
 	obj->insert("commandType", commandType);
 	obj->insert("commandDetail", commandDetail);
+	qDebug() << "in command body ,the detail is:" << commandDetail;
 	return *obj;
 }
 

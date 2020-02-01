@@ -42,6 +42,31 @@ QString BagProtocol::createUuid()
 	return str;
 }
 
+bool BagProtocol::saveToFile(QString fileName,QIODevice::OpenModeFlag flag )
+{
+	auto bytes = this->toBytes();
+	
+	QFile  fp(fileName);
+	fp.open(flag);
+	fp.write(bytes);
+	fp.close();
+
+	return true;
+}
+
+void BagProtocol::loadFromFile(QString fileName)
+{
+	
+
+	QFile  fp(fileName);
+	fp.open(QIODevice::OpenModeFlag::ReadOnly);
+	auto bytes = fp.read(fp.size());
+	this->fromBytes(bytes);
+	fp.close();
+
+	return;
+}
+
 
 QJsonDocument BagProtocol::getBag()
 {
@@ -51,4 +76,5 @@ QJsonDocument BagProtocol::getBag()
 void BagProtocol::fromBytes(QByteArray bytes)
 {
 	bag = QJsonDocument::fromJson(bytes);
+	this->setValue();
 }

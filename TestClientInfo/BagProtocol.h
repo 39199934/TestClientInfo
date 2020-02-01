@@ -3,6 +3,7 @@
 #include <QByteArray>
 #include <QJsonObject>
 #include <QUuid>
+#include <QFile>
 class BagProtocol
 {
 
@@ -37,6 +38,9 @@ public:
 	void fromJson(QJsonObject obj);
 
 	static QString createUuid();
+
+	bool saveToFile(QString fileName, QIODevice::OpenModeFlag flag = QIODevice::OpenModeFlag::WriteOnly);
+	void loadFromFile(QString fileName);
 	
 };
 

@@ -1,0 +1,21 @@
+{
+    "commandDetail": [
+        {
+            "name": "",
+            "nickName": "",
+            "password": "",
+            "uuid": "4b0f50af-5bd0-4cad-bda5-fb515145fe5e"
+        },
+        {
+            "name": "",
+            "nickName": "",
+            "password": "",
+            "uuid": "4b0f50af-5bd0-4cad-bda5-fb515145fe5e"
+        }
+    ],
+    "commandName": "login",
+    "commandType": "request",
+    "reciver": "server",
+    "sender": "client",
+    "type": "command"
+}
