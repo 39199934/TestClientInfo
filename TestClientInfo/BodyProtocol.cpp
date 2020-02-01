@@ -30,12 +30,12 @@ BodyProtocol::BodyProtocol(QString type, QString sender, QString reciver):
 BodyProtocol::~BodyProtocol()
 {
 }
-
+/*
 int BodyProtocol::getSize()
 {
 	return this->toBytes().size();
 	
-}
+}*/
 
 void BodyProtocol::setValue()
 {

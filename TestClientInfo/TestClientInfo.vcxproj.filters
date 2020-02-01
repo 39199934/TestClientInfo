@@ -54,6 +54,12 @@
     <ClCompile Include="CommandBody.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MyClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BagProtocol.h">
@@ -89,6 +95,12 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="ServerSetting.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MyClient.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MyServer.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

@@ -1,5 +1,14 @@
 #include "ServerSetting.h"
 
+ServerSetting::ServerSetting(const ServerSetting& newServer):
+	QObject(newServer.parent()),
+	iniFileName(newServer.iniFileName),
+	serverAddress(newServer.serverAddress),
+	serverPort(newServer.serverPort),
+	serverInfo(newServer.serverInfo)
+{
+}
+
 ServerSetting::ServerSetting(QObject *parent)
 	: QObject(parent),
 	serverAddress("127.0.0.1"),
@@ -7,7 +16,7 @@ ServerSetting::ServerSetting(QObject *parent)
 	iniFileName("ChatServer.ini"),
 	serverInfo(ServerInfo("server","ro server"))
 {
-	getSetting();
+	loadSetting();
 }
 
 ServerSetting::~ServerSetting()
@@ -15,7 +24,7 @@ ServerSetting::~ServerSetting()
 	saveSetting();
 }
 
-void ServerSetting::getSetting()
+void ServerSetting::loadSetting()
 {
 	QSettings set(iniFileName, QSettings::IniFormat);
 	this->serverAddress = set.value("address", serverAddress).toString();

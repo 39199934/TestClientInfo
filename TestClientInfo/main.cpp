@@ -8,6 +8,8 @@
 #include "Message.h"
 #include "CommandBody.h"
 #include "ServerSetting.h"
+#include "MyServer.h"
+#include "MyClient.h"
 using namespace std;
 
 void viewDoc(BagProtocol * user) {
@@ -28,12 +30,20 @@ int main(int argc, char *argv[])
 	qDebug() <<"command detail:"<< ar;
 	CommandBody cm("request", "login", ar, "client", "server");
 	//cm.saveToFile("test");
-	viewDoc(&cm);
-	viewDoc(&c1);
+	//viewDoc(&cm);
+	//viewDoc(&c1);
 	CommandBody cm2;
-	cm2.loadFromFile("test");
-	viewDoc(&cm2);
+	//cm2.loadFromFile("test");
+	//viewDoc(&cm2);
+	//MyServer* server = new MyServer(nullptr);
+	auto msg = Message(&cm, nullptr);
+	MyClient* c = new MyClient(nullptr);
+	c->connectToHost("127.0.0.1", 5666);
+	msg.send(c);
+	///c->close();
+
 
 	
 	return a.exec();
 }
+//

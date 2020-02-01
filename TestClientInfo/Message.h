@@ -3,6 +3,8 @@
 #include <QObject>
 #include "MessageHead.h"
 #include "BodyProtocol.h"
+#include <QTcpSocket>
+#include <QThread>
 
 class Message : public QObject
 {
@@ -17,5 +19,7 @@ public:
 	~Message();
 	MessageHead* head;
 	BodyProtocol* body;
+
+	void send(QTcpSocket* socket);
 
 };

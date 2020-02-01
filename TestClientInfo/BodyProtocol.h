@@ -9,7 +9,7 @@ public:
 	BodyProtocol(QString type);
 	BodyProtocol(QString type, QString sender, QString reciver);
 	virtual ~BodyProtocol();
-	int getSize();
+	//int getSize();
 	
 	//QString uuid;
 protected:

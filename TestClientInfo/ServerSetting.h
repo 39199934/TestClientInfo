@@ -16,9 +16,10 @@ public:
 	int serverPort;
 	ServerInfo serverInfo;
 
+	ServerSetting(const ServerSetting& newServer);
 	ServerSetting(QObject *parent = nullptr);
 	~ServerSetting();
 
-	void getSetting();
+	void loadSetting();
 	void saveSetting();
 };

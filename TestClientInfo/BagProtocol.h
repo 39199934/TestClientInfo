@@ -32,6 +32,8 @@ public:
 	
 	QJsonDocument getBag();
 
+	int getSize();
+
 
 	virtual void fromBytes(QByteArray bytes) ;//需要继承，用于从QByteArray 转换为本类中的数据和BAG
 	void fromJson(QJsonDocument doc);

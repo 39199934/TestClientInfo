@@ -147,6 +147,8 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Message.cpp" />
     <ClCompile Include="MessageHead.cpp" />
+    <ClCompile Include="MyClient.cpp" />
+    <ClCompile Include="MyServer.cpp" />
     <ClCompile Include="ServerInfo.cpp" />
     <ClCompile Include="ServerSetting.cpp" />
     <ClCompile Include="TextBody.cpp" />
@@ -159,6 +161,8 @@
     <QtMoc Include="Message.h" />
     <ClInclude Include="CommandBody.h" />
     <ClInclude Include="MessageHead.h" />
+    <QtMoc Include="MyClient.h" />
+    <QtMoc Include="MyServer.h" />
     <ClInclude Include="ServerInfo.h" />
     <QtMoc Include="ServerSetting.h" />
     <ClInclude Include="TextBody.h" />

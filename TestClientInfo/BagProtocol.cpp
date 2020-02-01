@@ -73,6 +73,12 @@ QJsonDocument BagProtocol::getBag()
 	return this->bag;
 }
 
+int BagProtocol::getSize()
+{
+	return this->toBytes().size();
+	
+}
+
 void BagProtocol::fromBytes(QByteArray bytes)
 {
 	bag = QJsonDocument::fromJson(bytes);

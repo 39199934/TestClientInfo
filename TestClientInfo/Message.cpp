@@ -1,5 +1,6 @@
 #include "Message.h"
 #include <iostream>
+#include <Windows.h>
 using namespace std;
 
 Message::Message(QObject *parent)
@@ -35,4 +36,14 @@ Message::~Message()
 	if (body) {
 		delete body;
 	}
+}
+
+void Message::send(QTcpSocket* socket)
+{
+	socket->write(head->toBytes(),head->getSize());
+	socket->waitForBytesWritten(3000);
+	
+	//Sleep(4000);
+	socket->flush();
+	socket->write(body->toBytes());
 }
